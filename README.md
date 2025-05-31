@@ -234,4 +234,4 @@ For support and questions:
 
 **AgriShield** - Helping Farmers Protect Their Harvest | Updated May 2025
 
-*Built with ❤️ for farmers in Nigeria*
+*Built with ❤️ for farmers in NIGERIA*
