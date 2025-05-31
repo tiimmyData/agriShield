@@ -1,5 +1,3 @@
-# Kano, Benue, Kebbi, Plateau Seasonal Calendar
-# This script contains the seasonal calendar data for Kano, Benue, Kebbi, and Plateau states in Nigeria.
 
 seasonal_calendar = {
     'Kano': {
@@ -933,3 +931,26 @@ seasonal_calendar = {
         }
     }
 }
+def get_seasonal_calendar():
+    """Return the complete seasonal calendar data"""
+    return seasonal_calendar
+
+def get_regional_data(region):
+    """Get seasonal data for a specific region"""
+    return seasonal_calendar.get(region, {})
+
+def get_monthly_data(region, month):
+    """Get data for a specific region and month"""
+    return seasonal_calendar.get(region, {}).get('monthly_data', {}).get(month, {})
+
+def get_all_regions():
+    """Get list of all regions"""
+    return list(seasonal_calendar.keys())
+
+def get_monthly_rainfall(region, month):
+    """Get rainfall data for a specific region and month"""
+    return get_monthly_data(region, month).get('avg_rainfall_mm', 0)
+
+def get_harvesting_status(region, month, crop):
+    """Get harvesting status for a specific crop in a region and month"""
+    return get_monthly_data(region, month).get('harvesting_periods', {}).get(crop, False)
